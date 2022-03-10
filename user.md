@@ -54,7 +54,7 @@ Parameters:
 | Name | Type | Required | Description |
 |------|------|----------|-------------|
 | user_id | integer | yes | The ID of the user |
-| show_id | integer | yes | The id of the show |
+| show_id | integer | yes | The ID of the show |
 
 ## Get user followers
 
