@@ -29,6 +29,22 @@ Parameters:
 | show_id | integer | yes | The ID of the show |
 | language | integer | yes | The language to return the results in |
 
+## Search a show
+
+Search for a show.
+
+```
+GET /show?q={query}
+```
+
+Parameters:
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| query | string | yes | The search query |
+| seasons_data | boolean | no | Whether to populate the `seasons` property |
+| limit | integer | no | The amount of results to return |
+| page | integer | no | The current page of search results |
+
 ## Get show seasons
 
 Gets all the seasons of a show.
