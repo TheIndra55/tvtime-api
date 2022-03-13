@@ -15,6 +15,14 @@ Parameters:
 |------|------|----------|-------------|
 | user_id | integer | yes | The ID of the user |
 
+Example response:
+```jsonc
+{
+  "id": 44823385,
+  "name": "Indra"
+}
+```
+
 ## Get a user profile
 
 Gets a user profile.
@@ -42,6 +50,30 @@ Parameters:
 |------|------|----------|-------------|
 | user_id | integer | yes | The ID of the user |
 
+Example response:
+```jsonc
+// jq .[] | { name, message, unlocked, icon }
+
+{
+  "name": "Serial watcher",
+  "message": "You've watched TV shows for 10 days in a row",
+  "unlocked": true,
+  "icon": "https://d1qhxojdkstxv7.cloudfront.net/first-xp/serial-watcher-01.png"
+}
+{
+  "name": "Serial Actor Voter",
+  "message": "You've voted for 5 actors of Moonshine  in a row",
+  "unlocked": true,
+  "icon": "https://d1qhxojdkstxv7.cloudfront.net/398096/62914549/new/actor-voter-1.png"
+}
+{
+  "name": "Meme",
+  "message": "You've created your first meme",
+  "unlocked": false,
+  "icon": "https://d1qhxojdkstxv7.cloudfront.net/first-xp/meme.png"
+}
+```
+
 ## Get user show progress
 
 Gets the progress of a user for a show.
@@ -55,6 +87,19 @@ Parameters:
 |------|------|----------|-------------|
 | user_id | integer | yes | The ID of the user |
 | show_id | integer | yes | The ID of the show |
+
+Example response:
+```jsonc
+{
+  "id": "369230",
+  "seasons_stats_seen": [
+    {
+      "season_number": 1,
+      "seen_episodes": "74"
+    }
+  ]
+}
+```
 
 ## Get user followers
 
